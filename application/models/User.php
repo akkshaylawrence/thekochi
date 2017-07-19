@@ -13,7 +13,6 @@ class user extends CI_Model{
           $query = $this->db->get ();
           if ($query->num_rows() > 0) {
             foreach ($query->result() as $row){
-              $userData['uid'] = $row -> id;
               $userData['name'] = $row -> email;
               $userData['authStatus'] = TRUE;
             }
@@ -21,7 +20,6 @@ class user extends CI_Model{
               $userData['authStatus'] = FALSE;
           }
           log_message('info','last query '.$this->db->last_query());
-          // log_message('info',print_r($userData,TRUE));
           return $userData;
      }
 }
