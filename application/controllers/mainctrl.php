@@ -9,6 +9,8 @@ class Mainctrl extends CI_Controller {
 	public function userLoginProcess() {
 			// set variables from the form
 		$this->load->model('User');
+		$this->load->model('Init');
+		$data = $this->init->initPath('/mainctrl');
 		$username = $this->input->post('username');
 		$password = $this->input->post('password');
 		log_message('info','$username '.$username);

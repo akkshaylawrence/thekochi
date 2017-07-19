@@ -47,13 +47,13 @@
 							<form action="">
 								<div id="formrow" class="row">
 									<div class="input-field col s12">
-										<input id="#login-name" type="email" placeholder="Enter email" class="validate">
+										<input id="login-name" type="email" placeholder="Enter email" class="validate">
 										<label data-error="Invalid email" for="email">Email</label>
 									</div>
 								</div>
 								<div id="formrow" class="row">
 									<div class="input-field col s12">
-										<input id="#login-pass" type="password" placeholder="Enter password" class="validate">
+										<input id="login-pass" type="password" placeholder="Enter password" class="validate">
 										<label data-error="Invalid password" for="password">Password</label>
 										<a class="login-link" href="#/">Lost your password?</a>
 										<p id="message" class="bg-danger"></p>
