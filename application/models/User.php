@@ -7,15 +7,14 @@ class user extends CI_Model{
      function checkUser($usr, $pwd){
           $this->db->select('*');
           $this->db->from ('users');
-          $this->db->where('username', $usr);
+          $this->db->where('email', $usr);
           $this->db->where('password', $pwd);
           $this->db->where('status', 'TRUE');
           $query = $this->db->get ();
           if ($query->num_rows() > 0) {
             foreach ($query->result() as $row){
-              $userData['uid'] = $row -> uid;
-              $userData['name'] = $row -> name;
-              $userData['username'] = $row -> username;
+              $userData['uid'] = $row -> id;
+              $userData['name'] = $row -> email;
               $userData['authStatus'] = TRUE;
             }
           } else {
