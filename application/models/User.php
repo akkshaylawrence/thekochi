@@ -9,7 +9,7 @@ class user extends CI_Model{
           $this->db->from ('users');
           $this->db->where('email', $usr);
           $this->db->where('password', $pwd);
-          $this->db->where('status', 'TRUE');
+          $this->db->where('status', 1);
           $query = $this->db->get ();
           if ($query->num_rows() > 0) {
             foreach ($query->result() as $row){
@@ -21,7 +21,7 @@ class user extends CI_Model{
               $userData['authStatus'] = FALSE;
           }
           log_message('info','last query '.$this->db->last_query());
-          log_message('info',print_r($userData,TRUE));
+          // log_message('info',print_r($userData,TRUE));
           return $userData;
      }
 }
