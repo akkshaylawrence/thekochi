@@ -18,7 +18,7 @@
 			<img class="brand-logo" src="<?= $images; ?>/thekochi.png" alt="theKochi">
 		</a>
 		<ul id="nav-mobile" class="right hide-on-med-and-down">
-			<li><a href="<?=site_url(" mainctrl/logout ")?>">LOGOUT</a></li>
+			<li><a href="<?=site_url("mainctrl/logout")?>">LOGOUT</a></li>
 		</ul>
 	</div>
 </nav>
@@ -44,16 +44,12 @@
 						</div>
 						<div id="formrow" class="row">
 							<div class="input-field col s6">
-								<input id="phone" type="text" placeholder="Enter your Phone Number">
-								<label for="phone">Phone Number</label>
-							</div>
-							<div class="input-field col s6">
-								<input id="lname" type="text" placeholder="Enter your Last Name">
-								<label for="lname">Last Name</label>
+								<input id="phone" type="text" class="validate" placeholder="Enter your Mobile Number">
+								<label data-error="Invalid Mobile Number" for="phone">Mobile Number</label>
 							</div>
 						</div>
 						<div id="formrow" class="row">
-							<a id="loginbtn" class="right waves-effect waves-green btn-flat">Login</a>
+							<a id="loginbtn" class="right waves-effect waves-green btn-flat">Submit</a>
 						</div>
 					</form>
 				</div>
@@ -64,5 +60,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
 <script src="<?= $js ?>/jquery-ui.min.js"></script>
+<script src="<?= $js ?>/register.js"></script>
 
 </html>
