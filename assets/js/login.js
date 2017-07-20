@@ -6,5 +6,10 @@ function login(){
 	alert(username);
 	var password = document.getElementById("login-pass").value;
 	alert(password);
-$.post(url,{username: username, password: password});
+$.post(url,{username: username, password: password},function(response){
+	console.log('------------------------------------');
+	console.log(response);
+	console.log('------------------------------------');
+	window.location = path+'/main';
+});
 };

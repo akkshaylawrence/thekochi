@@ -29,12 +29,20 @@ class Mainctrl extends CI_Controller {
 			$this->load->view('pages/main',$data);
 		}
 	}
-
+	public function main(){
+		$data = $this->init->initPath('/mainctrl');
+		$data += $this->session->userdata();
+		if($this->session->userdata('loggedIn')){
+			$this->load->view('pages/main',$data);
+		}else{
+			$this->load->view('pages/home',$data);
+		}
+	}
 	public function logout() {
 	$data = $this->Init->initPath ('/mainctrl');
 	$data += $this->Init->dbCustom();
 	// Destroy session data
 	$this->session->sess_destroy();
-	redirect(base_url(), 'refresh');
+	redirect(base_url(),'mainctrl','refresh');
 	}
 }
