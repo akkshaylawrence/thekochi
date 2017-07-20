@@ -7,7 +7,7 @@
 #
 # Host: localhost (MySQL 5.6.35)
 # Database: thekochi
-# Generation Time: 2017-07-20 07:24:38 +0000
+# Generation Time: 2017-07-20 18:00:10 +0000
 # ************************************************************
 
 
@@ -29,17 +29,21 @@ CREATE TABLE `users` (
   `uid` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `username` varchar(50) NOT NULL DEFAULT '',
   `password` varchar(100) NOT NULL DEFAULT '',
-  `status` tinyint(1) NOT NULL,
+  `name` varchar(100) NOT NULL DEFAULT '',
+  `mobile` int(12) DEFAULT NULL,
+  `country` varchar(30) DEFAULT NULL,
+  `region` varchar(30) DEFAULT NULL,
+  `status` tinyint(1) DEFAULT NULL,
+  `admin` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`uid`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
 
-INSERT INTO `users` (`uid`, `username`, `password`, `status`)
+INSERT INTO `users` (`uid`, `username`, `password`, `name`, `mobile`, `country`, `region`, `status`, `admin`)
 VALUES
-	(1,'akkshay7','akkshay',1),
-	(2,'akkshay','hi',1);
+	(1,'akkshay7','0b2de572417fb55c7ff5fde4ea481ee6','',NULL,NULL,NULL,NULL,NULL);
 
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
