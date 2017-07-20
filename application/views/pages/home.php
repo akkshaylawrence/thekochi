@@ -66,7 +66,7 @@
 								<div id="formrow" class="row">
 									<div class="input-field col s12">
 										<input id="fName" type="text">
-										<label for="fName">Username</label>
+										<label for="fName">Full Name</label>
 									</div>
 								</div>
 								<div id="formrow" class="row">
@@ -84,7 +84,7 @@
 								<div id="formrow" class="row">
 									<div class="input-field col s12">
 										<input id="passwordrc" type="password" class="validate">
-										<label data-error="Password do not match!" for="passwordrc">Confirm Password</label>
+										<label data-error="Passwords do not match!" for="passwordrc">Confirm Password</label>
 										<a id="reg-link" href="#login">Already a member?</a>
 									</div>
 								</div>
