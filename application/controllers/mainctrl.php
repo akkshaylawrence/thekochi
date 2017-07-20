@@ -16,7 +16,7 @@ class Mainctrl extends CI_Controller {
 		$userData = $this->User->checkUser($username, $password);
 		log_message('info',print_r($userData,TRUE));
 		if ($userData['authStatus'] == FALSE) {
-			echo $userData['authStatus'].","."incorrect username or password";
+			echo $userData['authStatus'].","."Incorrect username or password";
 		}elseif ($userData['authStatus'] == TRUE) {
 			$newdata = array(
 				'uid'  => $userData['uid'],
@@ -41,7 +41,6 @@ class Mainctrl extends CI_Controller {
 	public function logout() {
 	$data = $this->Init->initPath ('/mainctrl');
 	$data += $this->Init->dbCustom();
-	// Destroy session data
 	$this->session->sess_destroy();
 	redirect(base_url(),'mainctrl','refresh');
 	}
