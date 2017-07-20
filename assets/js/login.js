@@ -9,9 +9,10 @@ $.post(url,
       var res = data.split(",");
       status = res[0];
       message = res[1];
-      $('#message').html(message);
+		$( ".card" ).effect( "shake",{distance:15} );
+		$('#message').html(message);
       } else {
-      window.location = path;
+      window.location = base+'main';
     }
   });
 });

@@ -2,8 +2,14 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 class Mainctrl extends CI_Controller {
 	public function index(){
+		log_message('info',"In Index");
 		$data = $this->init->initPath('/mainctrl');
-		$this->load->view('pages/home',$data);
+		$data += $this->session->userdata();
+		if($this->session->userdata('loggedIn')){
+			$this->load->view('pages/main',$data);
+		}else{
+			$this->load->view('pages/home',$data);
+		}
 	}
 	public function userLoginProcess() {
 		$this->load->model('User');
@@ -39,9 +45,9 @@ class Mainctrl extends CI_Controller {
 		}
 	}
 	public function logout() {
-	$data = $this->Init->initPath ('/mainctrl');
-	$data += $this->Init->dbCustom();
+	log_message('info',"In Logout");
+	$data = $this->init->initPath ('/mainctrl');
 	$this->session->sess_destroy();
-	redirect(base_url(),'mainctrl','refresh');
+	redirect(base_url(),'refresh');
 	}
 }
