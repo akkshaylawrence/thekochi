@@ -7,7 +7,7 @@
 #
 # Host: localhost (MySQL 5.6.35)
 # Database: thekochi
-# Generation Time: 2017-07-19 14:20:11 +0000
+# Generation Time: 2017-07-20 07:24:38 +0000
 # ************************************************************
 
 
@@ -26,17 +26,20 @@
 DROP TABLE IF EXISTS `users`;
 
 CREATE TABLE `users` (
-  `email` varchar(50) NOT NULL DEFAULT '',
-  `password` longtext NOT NULL,
-  `status` tinyint(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `uid` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `username` varchar(50) NOT NULL DEFAULT '',
+  `password` varchar(100) NOT NULL DEFAULT '',
+  `status` tinyint(1) NOT NULL,
+  PRIMARY KEY (`uid`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
 
-INSERT INTO `users` (`email`, `password`, `status`)
+INSERT INTO `users` (`uid`, `username`, `password`, `status`)
 VALUES
-	('cruzer6ryc4@gmail.com','akkshay',1);
+	(1,'akkshay7','akkshay',1),
+	(2,'akkshay','hi',1);
 
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
