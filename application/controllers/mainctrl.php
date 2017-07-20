@@ -17,16 +17,16 @@ class Mainctrl extends CI_Controller {
 		log_message('info',print_r($userData,TRUE));
 		if ($userData['authStatus'] == FALSE) {
 			echo $userData['authStatus'].","."incorrect username or password";
-			exit;
 		}elseif ($userData['authStatus'] == TRUE) {
 			$newdata = array(
+				'uid'  => $userData['uid'],
 				'name'  => $userData['name'],
 				'loggedIn' => TRUE
 			);
 			$this->session->set_userdata($newdata);
 			log_message('info',print_r($_SESSION,TRUE));
 			log_message('info',print_r($userData,TRUE));
-			$this->load->view('pages/main',$data);
+			exit;
 		}
 	}
 	public function main(){

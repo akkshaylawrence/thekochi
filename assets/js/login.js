@@ -3,13 +3,10 @@ function login(){
 	var url = path+"/userLoginProcess";
 	console.log(url);
 	var username = document.getElementById("login-name").value;
-	alert(username);
+	// alert(username);
 	var password = document.getElementById("login-pass").value;
-	alert(password);
+	// alert(password);
 $.post(url,{username: username, password: password},function(response){
-	console.log('------------------------------------');
-	console.log(response);
-	console.log('------------------------------------');
 	window.location = path+'/main';
 });
 };

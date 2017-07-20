@@ -44,16 +44,16 @@
 							<form action="">
 								<div id="formrow" class="row">
 									<div class="input-field col s12">
-										<input id="login-name" type="text" placeholder="Enter username" class="validate">
-										<label data-error="Invalid username" for="login-name">Username</label>
+										<input id="login-name" type="text" placeholder="Enter username">
+										<label for="login-name">Username</label>
 									</div>
 								</div>
 								<div id="formrow" class="row">
 									<div class="input-field col s12">
-										<input id="login-pass" type="password" placeholder="Enter password" class="validate">
-										<label data-error="Invalid password" for="password">Password</label>
-										<a class="login-link" href="#/">Lost your password?</a>
+										<input id="login-pass" type="password" placeholder="Enter password">
+										<label for="password">Password</label>
 										<p id="message" class="bg-danger"></p>
+										<a class="login-link" href="#/">Lost your password?</a>
 									</div>
 								</div>
 								<div id="formrow" class="row">

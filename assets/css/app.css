@@ -34,3 +34,6 @@ h2{
 .formrow{
 	margin-bottom: 0px !important;
 }
+#message{
+	color: red;
+}
