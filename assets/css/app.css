@@ -6,7 +6,7 @@
 body>.container{
 	margin-top: 40px;
 }
-body {
+body{
 	background-image: url('../images/bg.jpg');
 	background-position: center center;
 	background-repeat: no-repeat;
@@ -36,4 +36,12 @@ h2{
 }
 #message{
 	color: red;
+}
+.center {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+#inform{
+	border: 1px solid darkgray !important;
 }
