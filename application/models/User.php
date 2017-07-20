@@ -7,7 +7,7 @@ class user extends CI_Model{
      function checkUser($usr, $pwd){
           $this->db->select('*');
           $this->db->from ('users');
-          $this->db->where('email', $usr);
+          $this->db->where('username', $usr);
           $this->db->where('password', $pwd);
           $this->db->where('status', 1);
           $query = $this->db->get ();

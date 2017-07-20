@@ -27,8 +27,6 @@ class Mainctrl extends CI_Controller {
 			log_message('info',print_r($_SESSION,TRUE));
 			log_message('info',print_r($userData,TRUE));
 			$this->load->view('pages/main',$data);
-			// redirect(base_url().'main', 'refresh');
-			exit;
 		}
 	}
 
@@ -38,7 +36,5 @@ class Mainctrl extends CI_Controller {
 	// Destroy session data
 	$this->session->sess_destroy();
 	redirect(base_url(), 'refresh');
-	// header('Location: ' . base_url() . 'admin');
-	// exit;
 	}
 }
