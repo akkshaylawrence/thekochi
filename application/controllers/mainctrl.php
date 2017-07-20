@@ -2,7 +2,6 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 class Mainctrl extends CI_Controller {
 	public function index(){
-		log_message('info',"In Index");
 		$data = $this->init->initPath('/mainctrl');
 		$data += $this->session->userdata();
 		if($this->session->userdata('loggedIn')){
@@ -17,8 +16,6 @@ class Mainctrl extends CI_Controller {
 		$data = $this->init->initPath('/mainctrl');
 		$username = $this->input->post('username');
 		$password = $this->input->post('password');
-		log_message('info','$username '.$username);
-		log_message('info','$password '.$password);
 		$userData = $this->User->checkUser($username, $password);
 		log_message('info',print_r($userData,TRUE));
 		if ($userData['authStatus'] == FALSE) {
@@ -31,7 +28,6 @@ class Mainctrl extends CI_Controller {
 			);
 			$this->session->set_userdata($newdata);
 			log_message('info',print_r($_SESSION,TRUE));
-			log_message('info',print_r($userData,TRUE));
 			exit;
 		}
 	}
@@ -45,7 +41,6 @@ class Mainctrl extends CI_Controller {
 		}
 	}
 	public function logout() {
-	log_message('info',"In Logout");
 	$data = $this->init->initPath ('/mainctrl');
 	$this->session->sess_destroy();
 	redirect(base_url(),'refresh');
