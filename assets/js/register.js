@@ -16,10 +16,12 @@ $("#regbtn").on('click', function (event) {
 	var password = $("#passwordr").val();
 	var cpassword = $("#passwordrc").val();
 	if (password.length < 5) {
+		$('#passwordr').focus();
 		$('#passwordr').addClass('invalid');
 		event.preventDefault();
 	} else {
 		if (password !== cpassword) {
+			$('#passwordrc').focus();
 			$('#passwordrc').addClass('invalid');
 			event.preventDefault();
 		} else {
