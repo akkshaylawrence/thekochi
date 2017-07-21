@@ -21,6 +21,7 @@ body{
 }
 .card-content {
 	border-radius: 0px 0px 20px 20px !important;
+	padding-bottom: 15px !important;
 	-moz-border-radius: 0px 0px 20px 20px !important;
 	-webkit-border-radius: 0px 0px 20px 20px !important;
 }
