@@ -89,7 +89,7 @@
 								</div>
 								<div id="formrow" class="row">
 									<div class="input-field col s12">
-										<input name="email" id="email" type="email" class="validate">
+										<input name="emailr" id="emailr" type="email" class="validate">
 										<label data-error="Not a valid email" for="emailr">Email</label>
 									</div>
 								</div>
@@ -108,7 +108,7 @@
 										<a id="reg-link" href="#login">Already a member?</a>
 									</div>
 									<div class="input-field col s6">
-										<a id="regbtn" class="right waves-effect waves-green btn-flat">Register</a>
+										<a id="regbtn" type="button" class="right waves-effect waves-green btn-flat">Register</a>
 									</div>
 								</div>
 							</form>

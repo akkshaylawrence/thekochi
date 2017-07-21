@@ -27,7 +27,16 @@ class user extends CI_Model{
 		}
 		public function addUser($fname,$username,$email,$phone,$password)
 		{
+			log_message('info',$email);
 			$password = md5($password);
+			$data = array(
+				'username' => $username,
+				'password' => $password,
+				'name' => $fname,
+				'email' => $email,
+				'mobile' => $phone);
+			$str = $this->db->insert_string('users', $data);
+			return $str;
 
 		}
 }

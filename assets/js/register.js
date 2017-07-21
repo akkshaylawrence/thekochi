@@ -4,7 +4,8 @@ $(document).ready(function () {
 		$('ul.tabs').tabs('select_tab', 'login');
 	});
 });
-$("#regbtn").click(function () {
+$("#regbtn").on('click',function (event) {
+	event.preventDefault();
 	var url = path + "/userRegProcess";
 	var fname = $("#fName").val();
 	var username = $("#usernamer").val();

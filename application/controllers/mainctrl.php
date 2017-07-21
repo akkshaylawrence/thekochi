@@ -42,7 +42,9 @@ class Mainctrl extends CI_Controller
 		$email = $this->input->post('email');
 		$phone = $this->input->post('phone');
 		$password = $this->input->post('password');
-		$userData = $this->User->addUser($fname,$username,$email,$phone,$password);
+		$newData = $this->User->addUser($fname,$username,$email,$phone,$password);
+		log_message('info',$newData);
+
 	}
     public function main()
     {
