@@ -16,11 +16,19 @@ $("#regbtn").on('click', function (event) {
 	var password = $("#passwordr").val();
 	var cpassword = $("#passwordrc").val();
 	if (password.length < 5) {
+		$('#passwordr').focus();
 		$('#passwordr').addClass('invalid');
+		$(".card").effect("shake", {
+			distance: 10
+		});
 		event.preventDefault();
 	} else {
 		if (password !== cpassword) {
+			$('#passwordrc').focus();
 			$('#passwordrc').addClass('invalid');
+			$(".card").effect("shake", {
+				distance: 10
+			});
 			event.preventDefault();
 		} else {
 			$.ajax({
@@ -43,8 +51,7 @@ $("#regbtn").on('click', function (event) {
 						});
 						$("#message").css("color", "red");
 						$('#message').html(message);
-					}
-					else if(status == true){
+					} else if (status == true) {
 						$("#message").css("color", "green");
 						$('#message').html(message);
 						$('#regform')[0].reset();
