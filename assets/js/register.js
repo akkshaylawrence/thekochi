@@ -1,16 +1,20 @@
-$(document).ready(function () {
-	$('ul.tabs').tabs();
-	$("#reg-link").click(function () {
-		$('ul.tabs').tabs('select_tab', 'login');
-	});
+$("#tabreg").click(function () {
+	$('#formhead').text("Join Us!");
 });
-$("#regbtn").click(function () {
-	var url = path + "/userRegisterProcess";
+$("#tablog").click(function () {
+	$('#formhead').text("Login");
+});
+$("#reg-link").click(function () {
+	$('ul.tabs').tabs('select_tab', 'login');
+});
+$("#regbtn").on('click', function (event) {
+	var url = path + "/userRegProcess";
 	var fname = $("#fName").val();
 	var username = $("#usernamer").val();
+	var phone = $("#phoner").val();
+	var email = $("#emailr").val();
 	var password = $("#passwordr").val();
 	var cpassword = $("#passwordrc").val();
-	var email = $("#emailc").val();
 	if (password.length < 5) {
 		$('#passwordr').addClass('invalid');
 		event.preventDefault();
@@ -23,22 +27,28 @@ $("#regbtn").click(function () {
 				type: 'post',
 				url: url,
 				data: {
-					fname:fname,
-					email:email,
+					fname: fname,
 					username: username,
+					phone: phone,
+					email: email,
 					password: password
 				},
 				success: function (data) {
-					if (data.indexOf(',') > -1) {
-						var res = data.split(",");
-						status = res[0];
-						message = res[1];
+					var res = data.split(",");
+					status = res[0];
+					message = res[1];
+					if (status == false) {
 						$(".card").effect("shake", {
 							distance: 10
 						});
+						$("#message").css("color", "red");
 						$('#message').html(message);
-					} else {
-						window.location = base + 'main';
+					}
+					else if(status == true){
+						$("#message").css("color", "green");
+						$('#message').html(message);
+						$('#regform')[0].reset();
+						$('ul.tabs').tabs('select_tab', 'login');
 					}
 				}
 			});

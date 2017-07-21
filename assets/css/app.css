@@ -34,9 +34,6 @@ h2{
 div#formrow.row{
 	margin-bottom: 0px !important;
 }
-#message{
-	color: red;
-}
 .center {
     margin: auto;
     width: 50%;
@@ -47,4 +44,7 @@ div#formrow.row{
 }
 form{
 	margin-bottom: 0px;
+}
+a#reg-link{
+	margin-bottom: 10px !important;
 }

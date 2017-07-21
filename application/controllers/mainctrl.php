@@ -12,8 +12,7 @@ class Mainctrl extends CI_Controller
             $this->load->view('pages/home', $data);
         }
     }
-    public function userLoginProcess()
-    {
+    public function userLoginProcess(){
         $this->load->model('User');
         $this->load->model('Init');
         $data = $this->init->initPath('/mainctrl');
@@ -33,6 +32,24 @@ class Mainctrl extends CI_Controller
             exit;
         }
     }
+	public function userRegProcess()
+	{
+		$this->load->model('User');
+		$this->load->model('Init');
+		$data = $this->init->initPath('/mainctrl');
+		$fname = $this->input->post('fname');
+		$username = $this->input->post('username');
+		$email = $this->input->post('email');
+		$phone = $this->input->post('phone');
+		$password = $this->input->post('password');
+		$regData = $this->User->addUser($fname,$username,$email,$phone,$password);
+		if($regData['regStatus'] == false){
+			echo $regData['regStatus'].","."Error creating account!";
+		}elseif($regData['regStatus'] == true){
+			echo $regData['regStatus'].","."Account Created Successfully! Please Login";
+			exit;
+		}
+	}
     public function main()
     {
         $data = $this->init->initPath('/mainctrl');
