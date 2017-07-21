@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="<?= $css ?>/app.css">
 	<script>
 		var path = "<?=$path?>";
-		var base = "<?=site_url()?>"
+		var base = "<?=base_url()?>"
 
 	</script>
 </head>

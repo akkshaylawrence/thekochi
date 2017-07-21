@@ -41,16 +41,16 @@
 					</div>
 					<div class="card-content grey lighten-4">
 						<div id="login">
-							<form>
+							<form id="loginform">
 								<div id="formrow" class="row">
 									<div class="input-field col s12">
-										<input id="login-name" type="text">
+										<input name="username" id="login-name" type="text">
 										<label for="login-name">Username</label>
 									</div>
 								</div>
 								<div id="formrow" class="row">
 									<div class="input-field col s12">
-										<input id="login-pass" type="password">
+										<input name="password" id="login-pass" type="password">
 										<label for="password">Password</label>
 										<p id="message" class="bg-danger"></p>
 										<a class="login-link" href="#/">Lost your password?</a>
@@ -65,25 +65,25 @@
 							<form>
 								<div id="formrow" class="row">
 									<div class="input-field col s12">
-										<input id="fName" type="text">
+										<input name="fullname" id="fName" type="text">
 										<label for="fName">Full Name</label>
 									</div>
 								</div>
 								<div id="formrow" class="row">
 									<div class="input-field col s12">
-										<input id="usernamer" type="text" class="validate">
+										<input name="usernamer" id="usernamer" type="text" class="validate">
 										<label data-error="Username already taken!" for="usernamer">Username/Mobile Number</label>
 									</div>
 								</div>
 								<div id="formrow" class="row">
 									<div class="input-field col s12">
-										<input id="passwordr" type="password" class="validate">
+										<input name="passwordr" id="passwordr" type="password" class="validate">
 										<label data-error="Password too short!" for="passwordr">Password</label>
 									</div>
 								</div>
 								<div id="formrow" class="row">
 									<div class="input-field col s12">
-										<input id="passwordrc" type="password" class="validate">
+										<input name="passwordrc" id="passwordrc" type="password" class="validate">
 										<label data-error="Passwords do not match!" for="passwordrc">Confirm Password</label>
 										<a id="reg-link" href="#login">Already a member?</a>
 									</div>
@@ -104,6 +104,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
 <script src="<?= $js ?>/jquery-ui.min.js"></script>
 <script src="<?= $js ?>/login.js"></script>
-<script src="<?= $js ?>/register.js"></script>
+<!-- <script src="<?= $js ?>/register.js"></script> -->
 
 </html>

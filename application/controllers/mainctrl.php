@@ -30,7 +30,6 @@ class Mainctrl extends CI_Controller
                 'loggedIn' => true
             );
             $this->session->set_userdata($newdata);
-            log_message('info', print_r($_SESSION, true));
             exit;
         }
     }

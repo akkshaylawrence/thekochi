@@ -10,30 +10,38 @@ $("#regbtn").click(function () {
 	var username = $("#usernamer").val();
 	var password = $("#passwordr").val();
 	var cpassword = $("#passwordrc").val();
+	var email = $("#emailc").val();
 	if (password.length < 5) {
 		$('#passwordr').addClass('invalid');
+		event.preventDefault();
 	} else {
 		if (password !== cpassword) {
 			$('#passwordrc').addClass('invalid');
+			event.preventDefault();
 		} else {
-			$.post(url, {
-					fname: fname,
+			$.ajax({
+				type: 'post',
+				url: url,
+				data: {
+					fname:fname,
+					email:email,
 					username: username,
 					password: password
 				},
-				function (data) {
+				success: function (data) {
 					if (data.indexOf(',') > -1) {
 						var res = data.split(",");
 						status = res[0];
 						message = res[1];
 						$(".card").effect("shake", {
-							distance: 15
+							distance: 10
 						});
 						$('#message').html(message);
 					} else {
 						window.location = base + 'main';
 					}
-				});
+				}
+			});
 		}
 	}
 });
