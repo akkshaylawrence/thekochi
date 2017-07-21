@@ -42,9 +42,13 @@ class Mainctrl extends CI_Controller
 		$email = $this->input->post('email');
 		$phone = $this->input->post('phone');
 		$password = $this->input->post('password');
-		$newData = $this->User->addUser($fname,$username,$email,$phone,$password);
-		log_message('info',$newData);
-
+		$regData = $this->User->addUser($fname,$username,$email,$phone,$password);
+		if($regData['regStatus'] == false){
+			echo $regData['regStatus'].","."Error creating account!";
+		}elseif($regData['regStatus'] == true){
+			echo $regData['regStatus'].","."Account Created Successfully! Please Login";
+			exit;
+		}
 	}
     public function main()
     {

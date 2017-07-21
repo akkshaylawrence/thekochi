@@ -1,3 +1,6 @@
+$(document).ready(function () {
+	$('ul.tabs').tabs();
+});
 $("#loginbtn").click(function () {
 	var url = path + "/userLoginProcess";
 	var username = $("#login-name").val();
@@ -17,6 +20,7 @@ $("#loginbtn").click(function () {
 				$(".card").effect("shake", {
 					distance: 10
 				});
+				$("#message").css("color", "red");
 				$('#message').html(message);
 			} else {
 				window.location = base + 'main';

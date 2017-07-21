@@ -37,12 +37,12 @@
 			<div class="col s12 m6 l6">
 				<div class="card">
 					<div class="card-content">
-						<h2>Join Us!</h2>
+						<h2 id="formhead">Login</h2>
 					</div>
 					<div class="card-tabs">
 						<ul class="tabs">
-							<li class="tab"><a class="active" href="#login">Login</a></li>
-							<li class="tab"><a href="#reg">Register</a></li>
+							<li class="tab"><a id="tablog" class="active" href="#login">Login</a></li>
+							<li class="tab"><a id="tabreg" href="#reg">Register</a></li>
 						</ul>
 					</div>
 					<div class="card-content grey lighten-4">
@@ -69,8 +69,6 @@
 						</div>
 						<div id="reg">
 							<form id="regform">
-								<div id="formrow" class="row">
-								</div>
 								<div id="formrow" class="row">
 									<div class="input-field col s12">
 										<input name="fullname" id="fName" type="text">
@@ -108,7 +106,7 @@
 										<a id="reg-link" href="#login">Already a member?</a>
 									</div>
 									<div class="input-field col s6">
-										<a href="#/" id="regbtn" class="right waves-effect waves-green btn-flat">Register</a>
+										<a id="regbtn" class="right waves-effect waves-green btn-flat">Register</a>
 									</div>
 								</div>
 							</form>
