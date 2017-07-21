@@ -108,7 +108,7 @@
 										<a id="reg-link" href="#login">Already a member?</a>
 									</div>
 									<div class="input-field col s6">
-										<a id="regbtn" type="button" class="right waves-effect waves-green btn-flat">Register</a>
+										<a href="#/" id="regbtn" class="right waves-effect waves-green btn-flat">Register</a>
 									</div>
 								</div>
 							</form>
