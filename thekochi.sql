@@ -7,7 +7,7 @@
 #
 # Host: localhost (MySQL 5.6.35)
 # Database: thekochi
-# Generation Time: 2017-07-21 10:03:57 +0000
+# Generation Time: 2017-07-21 11:58:53 +0000
 # ************************************************************
 
 
@@ -34,7 +34,7 @@ CREATE TABLE `users` (
   `mobile` varchar(12) DEFAULT NULL,
   `country` varchar(30) DEFAULT NULL,
   `region` varchar(30) DEFAULT NULL,
-  `status` tinyint(1) DEFAULT NULL,
+  `status` tinyint(1) NOT NULL,
   `admin` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`uid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -44,7 +44,8 @@ LOCK TABLES `users` WRITE;
 
 INSERT INTO `users` (`uid`, `username`, `password`, `name`, `email`, `mobile`, `country`, `region`, `status`, `admin`)
 VALUES
-	(1,'akkshay7','0b2de572417fb55c7ff5fde4ea481ee6','Akkshay Lawrence','cruzer6ryc4@gmail.com','8139878737','India','India',1,1);
+	(1,'akkshay7','0b2de572417fb55c7ff5fde4ea481ee6','Akkshay Lawrence','cruzer6ryc4@gmail.com','8139878737','India','India',1,1),
+	(11,'','','',NULL,NULL,NULL,NULL,0,NULL);
 
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
