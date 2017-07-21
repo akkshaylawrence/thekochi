@@ -38,7 +38,7 @@ $("#regbtn").click(function () {
 						$(".card").effect("shake", {
 							distance: 10
 						});
-						$('#message').html(message);
+						$('#messager').html(message);
 					} else {
 						window.location = base + 'main';
 					}
