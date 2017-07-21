@@ -5,12 +5,13 @@ $(document).ready(function () {
 	});
 });
 $("#regbtn").click(function () {
-	var url = path + "/userRegisterProcess";
+	var url = path + "/userRegProcess";
 	var fname = $("#fName").val();
 	var username = $("#usernamer").val();
+	var phone = $("#phoner").val();
+	var email = $("#emailr").val();
 	var password = $("#passwordr").val();
 	var cpassword = $("#passwordrc").val();
-	var email = $("#emailc").val();
 	if (password.length < 5) {
 		$('#passwordr').addClass('invalid');
 		event.preventDefault();
@@ -24,8 +25,9 @@ $("#regbtn").click(function () {
 				url: url,
 				data: {
 					fname:fname,
-					email:email,
 					username: username,
+					phone:phone,
+					email:email,
 					password: password
 				},
 				success: function (data) {

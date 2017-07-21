@@ -4,7 +4,8 @@ class user extends CI_Model{
 		function __construct(){
 			parent::__construct();
 		}
-		function checkUser($usr, $pwd){
+		function checkUser($usr, $pwd)
+		{
 			$pwd = md5($pwd);
 			$this->db->select('*');
 			$this->db->from ('users');
@@ -23,5 +24,10 @@ class user extends CI_Model{
 			}
 			log_message('info','last query '.$this->db->last_query());
 			return $userData;
+		}
+		public function addUser($fname,$username,$email,$phone,$password)
+		{
+			$password = md5($password);
+
 		}
 }

@@ -1,10 +1,15 @@
 <html>
+
 <head>
 	<title>The Kochi</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
 	<link rel="stylesheet" href="<?= $css ?>/app.css">
-	<script>var path="<?=$path?>";var base="<?=site_url()?>"</script>
+	<script>
+		var path = "<?=$path?>";
+		var base = "<?=site_url()?>"
+
+	</script>
 </head>
 <nav class="transparent z-depth-0">
 	<div class="nav-wrapper container">
@@ -13,6 +18,7 @@
 		</a>
 	</div>
 </nav>
+
 <body>
 	<div class="container">
 		<div class="row">
@@ -62,7 +68,9 @@
 							</form>
 						</div>
 						<div id="reg">
-							<form>
+							<form id="regform">
+								<div id="formrow" class="row">
+								</div>
 								<div id="formrow" class="row">
 									<div class="input-field col s12">
 										<input name="fullname" id="fName" type="text">
@@ -70,26 +78,38 @@
 									</div>
 								</div>
 								<div id="formrow" class="row">
-									<div class="input-field col s12">
+									<div class="input-field col s6">
 										<input name="usernamer" id="usernamer" type="text" class="validate">
-										<label data-error="Username already taken!" for="usernamer">Username/Mobile Number</label>
+										<label data-error="Username already taken!" for="usernamer">Username</label>
+									</div>
+									<div class="input-field col s6">
+										<input name="phoner" id="phoner" type="text" class="validate">
+										<label data-error="Invalid Mobile Number!" for="phoner">Phone</label>
 									</div>
 								</div>
 								<div id="formrow" class="row">
 									<div class="input-field col s12">
+										<input name="email" id="email" type="email" class="validate">
+										<label data-error="Not a valid email" for="emailr">Email</label>
+									</div>
+								</div>
+								<div id="formrow" class="row">
+									<div class="input-field col s6">
 										<input name="passwordr" id="passwordr" type="password" class="validate">
 										<label data-error="Password too short!" for="passwordr">Password</label>
 									</div>
-								</div>
-								<div id="formrow" class="row">
-									<div class="input-field col s12">
+									<div class="input-field col s6">
 										<input name="passwordrc" id="passwordrc" type="password" class="validate">
 										<label data-error="Passwords do not match!" for="passwordrc">Confirm Password</label>
-										<a id="reg-link" href="#login">Already a member?</a>
 									</div>
 								</div>
 								<div id="formrow" class="row">
-									<a id="regbtn" class="right waves-effect waves-green btn-flat">Register</a>
+									<div class="input-field col s6">
+										<a id="reg-link" href="#login">Already a member?</a>
+									</div>
+									<div class="input-field col s6">
+										<a id="regbtn" class="right waves-effect waves-green btn-flat">Register</a>
+									</div>
 								</div>
 							</form>
 						</div>
@@ -104,6 +124,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
 <script src="<?= $js ?>/jquery-ui.min.js"></script>
 <script src="<?= $js ?>/login.js"></script>
-<!-- <script src="<?= $js ?>/register.js"></script> -->
+<script src="<?= $js ?>/register.js"></script>
 
 </html>
