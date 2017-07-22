@@ -29,7 +29,7 @@
 			<div class="col s12 m6 l6">
 				<div class="card z-depth-2">
 					<div class="card-content center">
-						<h3>Name</h3>
+						<h3>Akkshay</h3>
 					</div>
 					<div id="inform" class="card-content grey lighten-4">
 					</div>
