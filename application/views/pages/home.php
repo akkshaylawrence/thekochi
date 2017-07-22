@@ -19,7 +19,7 @@
 	</div>
 </nav>
 
-<body>
+<body class="home">
 	<div class="container">
 		<div class="row">
 			<div class="col s12 m6 l6">
