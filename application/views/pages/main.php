@@ -18,20 +18,23 @@
 			<img class="brand-logo" src="<?= $images; ?>/thekochi.png" alt="theKochi">
 		</a>
 		<ul id="nav-mobile" class="right hide-on-med-and-down">
-			<li><a href="<?=site_url(" mainctrl/logout ")?>">LOGOUT</a></li>
+			<li><a href="<?=site_url("mainctrl/logout ")?>">LOGOUT</a></li>
 		</ul>
 	</div>
 </nav>
 
-<body class="cyan">
+<body class="blue lighten-1">
 	<div class="container">
 		<div class="row">
 			<div class="col s12 m6 l6">
 				<div class="card z-depth-2">
 					<div class="card-content center">
-						<h3>Name</h3>
+						<h3>Akkshay</h3>
 					</div>
 					<div id="inform" class="card-content grey lighten-4">
+						<div class="row valign-wrapper">
+							<span class="black-text">Country</span>
+						</div>
 					</div>
 				</div>
 			</div>
