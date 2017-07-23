@@ -16,7 +16,11 @@ class user extends CI_Model{
 			if ($query->num_rows() > 0) {
 			foreach ($query->result() as $row){
 				$userData['uid'] = $row -> uid;
-				$userData['name'] = $row -> username;
+				$userData['username'] = $row -> username;
+				$userData['name'] = $row -> name;
+				$userData['mobile'] = $row -> mobile;
+				$userData['email'] = $row -> email;
+				$userData['country'] = $row -> country;
 				$userData['authStatus'] = TRUE;
 			}
 			} else {

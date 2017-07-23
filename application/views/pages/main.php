@@ -15,15 +15,15 @@
 <nav class="transparent z-depth-0">
 	<div class="nav-wrapper container">
 		<a id="logo-container" href="<?= base_url() ?>">
-			<img class="brand-logo" src="<?= $images; ?>/thekochi.png" alt="theKochi">
+			<img class="brand-logo" src="<?= $images; ?>/thekochib.png" alt="theKochi">
 		</a>
 		<ul id="nav-mobile" class="right hide-on-med-and-down">
-			<li><a href="<?=site_url("mainctrl/logout ")?>">LOGOUT</a></li>
+			<li><a class="black-text" href="<?=site_url("mainctrl/logout ")?>">LOGOUT</a></li>
 		</ul>
 	</div>
 </nav>
 
-<body class="blue lighten-1">
+<body class="amber lighten-5">
 	<div class="container">
 		<div class="row">
 			<div class="col s12 m6 l6">
